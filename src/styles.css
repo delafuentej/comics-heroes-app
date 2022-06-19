@@ -7,6 +7,14 @@ body {
     padding-bottom: 50px;
 }
 
+.img-logo-dc {
+    width: 460px;
+}
+
+.img-logo-marvel {
+    width: 240px;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

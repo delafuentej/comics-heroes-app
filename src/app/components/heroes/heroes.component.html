@@ -4,8 +4,8 @@
 
 
 
-    <div class="card" *ngFor="let hero of heroes">
-        <img [src]="hero.img" class="card-img-top img-fluid" alt="hero.name">
+    <div class="card animated fadeIn fast" *ngFor="let hero of heroes, let i=index">
+        <img [src]="hero.img" class="card-img-top img-fluid" [alt]="hero.name">
         <div class=" card-body ">
             <h5 class="card-title ">{{hero.name}}</h5>
             <p class="card-text ">{{hero.info}}</p>
@@ -15,8 +15,9 @@
             <small>Created in: {{hero.create}}</small>
         </div>
 
-        <button type="button" class="btn btn-outline-primary">See more ...</button>
-
+        <!--  <a [routerLink]="['/hero', i]" class="btn btn-outline-primary">See more ...
+        </a> -->
+        <button (click)="seeDetailsHero(i)" type="button" class="btn btn-outline-primary">See more ...</button>
     </div>
 
 
