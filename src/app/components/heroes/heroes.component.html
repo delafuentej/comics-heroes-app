@@ -7,12 +7,12 @@
     <div class="card animated fadeIn fast" *ngFor="let hero of heroes, let i=index">
         <img [src]="hero.img" class="card-img-top img-fluid" [alt]="hero.name">
         <div class=" card-body ">
-            <h5 class="card-title ">{{hero.name}}</h5>
+            <h5 class="card-title ">{{hero.name | uppercase}}</h5>
             <p class="card-text ">{{hero.info}}</p>
         </div>
 
         <div class="card-footer ">
-            <small>Created in: {{hero.create}}</small>
+            <small>Created in: {{hero.create | date:'y'}}</small>
         </div>
 
         <!--  <a [routerLink]="['/hero', i]" class="btn btn-outline-primary">See more ...
