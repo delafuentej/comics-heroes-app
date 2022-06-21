@@ -3,4 +3,4 @@
 
 
 <!-- *ngFor="let hero of heroes, let i=index"  -->
-<app-card [hero]="hero" [index]="i" *ngFor="let hero of heroes, let i=index"></app-card>
+<app-card (selectedHero)="seeDetailsHero($event)" [hero]="hero" [index]="i" *ngFor="let hero of heroes, let i=index"></app-card>
