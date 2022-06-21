@@ -66,5 +66,20 @@ export class HeroesService {
      getHero(idx:number){
       return this.heroes[idx]
      }
-    
+     searchHeroes(searchTerm :string):IHeroes[]{
+      let heroesToFind:IHeroes[]=[];
+      searchTerm= searchTerm.toLowerCase();
+
+      for(let i=0; i< this.heroes.length;i++){
+        let hero= this.heroes[i];
+        let name=hero.name.toLowerCase();
+        if(name.indexOf(searchTerm)>=0){
+            hero.idx=i;
+            heroesToFind.push(hero)
+        }
+       
+     }
+     return heroesToFind;
+
+}
 }

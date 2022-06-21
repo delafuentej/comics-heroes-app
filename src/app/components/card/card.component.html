@@ -1,0 +1,23 @@
+<!-- *ngFor="let hero of heroes, let i=index"  -->
+
+<div>
+
+    <div class="card bg-dark text-white animated fadeIn fast p-3 border  border-3 border-primary rounded">
+        <img [src]="hero.img" class="card-img-top img-fluid" [alt]="hero.name">
+        <div class=" card-body ">
+            <h5 class="card-title text-center text-primary">{{hero.name | uppercase}}</h5>
+            <p class="card-text  ">{{hero.info}}</p>
+        </div>
+
+        <div class="card-footer alert alert-primary text-center ">
+            <small>Created in: {{hero.create | date:'y'}}</small>
+        </div>
+
+        <!--  <a [routerLink]="['/hero', i]" class="btn btn-outline-primary">See more ...
+                </a> -->
+        <button (click)="seeDetailsHero()" type="button" class="btn btn-outline-primary text-white p-3">See more ...</button>
+    </div>
+
+
+
+</div>

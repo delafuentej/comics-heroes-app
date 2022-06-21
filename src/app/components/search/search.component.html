@@ -1,0 +1,18 @@
+<h1>Search Term: <small>{{searchTerm}}</small></h1>
+<hr>
+<!---->
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+
+            There are no results with the search term
+        </div>
+    </div>
+
+
+
+</div>
+
+<!--  class="card animated fadeIn fast"-->
+<!--*ngFor="let hero of heroes, let i=index"  -->
+<app-card [hero]="hero" [index]="hero.idx" *ngFor=" let hero of heroes "></app-card>
