@@ -1,25 +1,6 @@
 <h1>Heroes Marvel/DC</h1>
 <hr>
-<div class=" d-flex row row-cols-1 row-cols-md-3 g-4">
 
 
-
-    <div class="card animated fadeIn fast" *ngFor="let hero of heroes, let i=index">
-        <img [src]="hero.img" class="card-img-top img-fluid" [alt]="hero.name">
-        <div class=" card-body ">
-            <h5 class="card-title ">{{hero.name | uppercase}}</h5>
-            <p class="card-text ">{{hero.info}}</p>
-        </div>
-
-        <div class="card-footer ">
-            <small>Created in: {{hero.create | date:'y'}}</small>
-        </div>
-
-        <!--  <a [routerLink]="['/hero', i]" class="btn btn-outline-primary">See more ...
-        </a> -->
-        <button (click)="seeDetailsHero(i)" type="button" class="btn btn-outline-primary">See more ...</button>
-    </div>
-
-
-
-</div>
+<!-- *ngFor="let hero of heroes, let i=index"  -->
+<app-card [hero]="hero" [index]="i" *ngFor="let hero of heroes, let i=index"></app-card>
