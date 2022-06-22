@@ -1,9 +1,11 @@
 <h1>
     Heroes Marvel/DC</h1>
 <hr>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <!-- *ngFor="let hero of heroes, let i=index"  -->
-    <app-card class="col" (selectedHero)="seeDetailsHero($event) " [hero]="hero " [index]="i " *ngFor="let hero of heroes, let i=index "></app-card>
+<div class="col">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- *ngFor="let hero of heroes, let i=index"  -->
+        <app-card (selectedHero)="seeDetailsHero($event)" [hero]="hero " [index]="i " *ngFor="let hero of heroes, let i=index "></app-card>
 
 
+    </div>
 </div>
